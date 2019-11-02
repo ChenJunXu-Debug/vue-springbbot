@@ -10,7 +10,6 @@
  */
 package com.cjx.vo;
 
-import java.util.List;
 
 /**
  * 〈一句话功能简述〉<br> 
