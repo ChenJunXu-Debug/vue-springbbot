@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cjx.dao.PhotosMapper">
+    <!--全查-->
+    <select id="findAll" resultType="photos">
+      select id, imgUrl, title from photos
+    </select>
+    <!--根据分类查询-->
+    <select id="findByCate" resultType="photos">
+        select id, imgUrl, title from photos where category = #{category}
+    </select>
+    <!--根据id查询-->
+    <select id="findById" resultType="photos">
+        select * from photos where id = #{id}
+    </select>
+    <!--点击加一-->
+    <update id="addClick">
+        update photos set click = click + 1 where id = #{id}
+    </update>
+</mapper>
